@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perinpanayagam Sivasankar | Resume</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      body {
+        padding: 24px;
+      }
+      .resume-page {
+        max-width: 920px;
+        margin: 0 auto;
+      }
+      .resume-shell {
+        padding: 28px;
+        border-radius: 24px;
+        background: rgba(8, 16, 29, 0.92);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+      }
+      .resume-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding-bottom: 20px;
+        margin-bottom: 24px;
+      }
+      .resume-page h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 0 0 8px;
+      }
+      .resume-grid {
+        display: grid;
+        gap: 18px;
+      }
+      .resume-card {
+        padding: 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .resume-list {
+        margin: 10px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+      .resume-actions {
+        margin-top: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      @media print {
+        body {
+          background: #fff;
+          color: #111;
+        }
+        .resume-shell {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="resume-page">
+    <main class="resume-shell">
+      <section class="resume-top">
+        <div>
+          <span class="eyebrow">Resume</span>
+          <h1>Perinpanayagam Sivasankar</h1>
+          <p class="hero-text">Data Science Undergraduate | AI &amp; Software Development</p>
+        </div>
+        <div>
+          <p class="hero-text">Jaffna, Sri Lanka</p>
+          <p class="hero-text">perinpanayagamsivasankar@gmail.com</p>
+          <p class="hero-text">linkedin.com/in/sivasankar013</p>
+          <p class="hero-text">github.com/Sankarboy200313</p>
+        </div>
+      </section>
+
+      <div class="resume-grid">
+        <article class="resume-card">
+          <h2>Summary</h2>
+          <p class="hero-text">
+            Aspiring data scientist focused on AI, analytics, and full-stack development. Strong in
+            Python, SQL, React, MongoDB, and practical project delivery.
+          </p>
+        </article>
+
+        <article class="resume-card">
+          <h2>Skills</h2>
+          <ul class="resume-list">
+            <li>Python, Java, JavaScript, TypeScript, C, C++</li>
+            <li>scikit-learn, Pandas, NumPy, Predictive Analytics, EDA</li>
+            <li>SQL, MySQL, MongoDB, Database Design</li>
+            <li>React.js, Express.js, Spring Boot, FastAPI</li>
+            <li>Power BI, Tableau, Excel, Git, Postman</li>
+          </ul>
+        </article>
+
+        <article class="resume-card">
+          <h2>Projects</h2>
+          <ul class="resume-list">
+            <li>Student Stress Monitoring AI Assistant</li>
+            <li>Mental Wellbeing AI System</li>
+            <li>AI Prediction Model</li>
+            <li>Clinic Appointment Management App</li>
+            <li>Online Bakery Product Platform</li>
+            <li>Arduino UNO Smart Greenhouse</li>
+          </ul>
+        </article>
+
+        <article class="resume-card">
+          <h2>Education</h2>
+          <ul class="resume-list">
+            <li>BSc (Hons) in Data Science - SLIIT (2024 - 2028)</li>
+            <li>GCE Advanced Level - Jaffna Hindu College (2022)</li>
+          </ul>
+        </article>
+
+        <article class="resume-card">
+          <h2>Certifications</h2>
+          <ul class="resume-list">
+            <li>LinkedIn Learning - AI Basics</li>
+            <li>University of Moratuwa - Python for Beginners</li>
+            <li>Microsoft Learn - Describe Cloud Service Types</li>
+            <li>Tata Consultancy Services - Data Visualisation: Empowering Business with Effective Insights (Forage, 2026)</li>
+            <li>Tata Group - GenAI Powered Data Analytics (Forage, 2026)</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="resume-actions">
+        <a class="button button-primary" href="./SivasankarPerinpanayagam_CV.pdf" download>Download PDF</a>
+        <a class="button button-secondary" href="./index.html">Back to Portfolio</a>
+        <a class="button button-secondary" href="./index.html#contact">Contact</a>
+      </div>
+    </main>
+  </body>
+</html>

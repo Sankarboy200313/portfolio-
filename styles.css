@@ -118,17 +118,16 @@ main,
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(1.18) contrast(1.08) saturate(1.05);
   background: linear-gradient(135deg, rgba(102, 217, 232, 0.18), rgba(124, 140, 255, 0.26));
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: var(--shadow);
+  display: block;
 }
 
 .brand-text {
@@ -209,7 +208,7 @@ main {
 }
 
 .section {
-  margin-top: 42px;
+  margin-top: 54px;
 }
 
 .hero {
@@ -284,7 +283,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(2rem, 3.3vw, 3rem);
 }
 
 h3 {
@@ -294,7 +293,9 @@ h3 {
 .hero-text,
 .card p,
 .timeline-item p,
-.contact-card small {
+.contact-card small,
+.contact-note,
+.resume-page .resume-note {
   color: var(--muted);
   line-height: 1.72;
 }
@@ -376,9 +377,54 @@ h3 {
   gap: 22px;
 }
 
+.hero-profile {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(102, 217, 232, 0.14), transparent 42%),
+    linear-gradient(135deg, rgba(102, 217, 232, 0.08), rgba(124, 140, 255, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-portrait {
+  width: 132px;
+  height: 132px;
+  border-radius: 28px;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(1.18) contrast(1.08) saturate(1.05);
+  background: rgba(255, 255, 255, 0.08);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
+}
+
+.hero-profile h3 {
+  margin-top: 6px;
+}
+
+.hero-profile p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hero-profile-label {
+  margin: 0;
+  color: #aef2fb !important;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
 .hero-card-top,
 .metric-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
@@ -548,24 +594,48 @@ h3 {
   border-radius: 16px;
   display: grid;
   place-items: center;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
   background: linear-gradient(135deg, rgba(102, 217, 232, 0.16), rgba(124, 140, 255, 0.2));
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.project-meta {
+.project-meta,
+.project-metrics {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 16px;
 }
 
-.project-meta span {
+.project-meta span,
+.project-metrics span {
   padding: 8px 12px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.04);
   color: #d8e8fb;
   font-size: 0.88rem;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.project-stats {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-stats strong {
+  font-size: 1rem;
+  color: #eef5ff;
 }
 
 .list-clean {
@@ -588,6 +658,12 @@ h3 {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -598,6 +674,24 @@ h3 {
   max-width: 72ch;
   margin: 0 0 18px;
   color: var(--muted);
+}
+
+.contact-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(102, 217, 232, 0.08), rgba(124, 140, 255, 0.1));
+  border: 1px solid rgba(102, 217, 232, 0.14);
+}
+
+.contact-banner strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
 }
 
 .contact-card {
@@ -654,7 +748,8 @@ h3 {
 @media (max-width: 1080px) {
   .hero,
   .project-grid,
-  .contact-grid {
+  .contact-grid,
+  .learning-grid {
     grid-template-columns: 1fr;
   }
 
@@ -697,6 +792,18 @@ h3 {
     border-radius: 22px;
   }
 
+  .hero-profile {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .hero-portrait {
+    width: 92px;
+    height: 92px;
+    border-radius: 22px;
+  }
+
   .hero-card-top,
   .metric-row {
     flex-direction: column;
@@ -713,5 +820,9 @@ h3 {
 
   .site-nav a {
     white-space: nowrap;
+  }
+
+  .contact-banner {
+    align-items: flex-start;
   }
 }
